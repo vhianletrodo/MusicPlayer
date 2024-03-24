@@ -1,0 +1,205 @@
+body {
+    background: url("https://s3-alpha-sig.figma.com/img/0124/e327/82a67cb60dac1944782fbe368f616907?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=UllTXdZx1yH1kSiKjhJmmdCd~6N3hSPs7voEgfxZcP6FY~ymDqUzbCipmZBTWsX81TElTWCbm7ukjPEMJ4LQtZjHW33-4YEXicwCPRXlekp~bxGvggq1UFnlkaKqqQvbwP0jMcOtwDMNs9QsTKftGWTnRampOTgcV0RNSpdJCWBVOiPevN9HARCnTKYBhPn0BKZOBcBUFkYzpfihwaZ4Sq8v4pJMwRWbvtS27Wjfzp7ZbFrOmqavvgf6ABYteIv8uCLOmBmOof4xdD2JWZA4-GEanYv6zF-E~pmb3nFu7OOhnExboD3HoTGTSlKO2VIDdv~qwlMwGeWlRROJueJKXQ__");
+   background-size:cover;   
+   color: #fff;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-attachment: fixed;
+
+
+  }
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link {
+    color: #fff;
+}
+.nav-tabs .nav-item.show .nav-link, 
+.nav-tabs .nav-link.active,
+.nav-tabs .nav-link,
+.nav-tabs,
+.card {
+    border: 0!important;
+    background: transparent;
+}
+.nav-tabs #nav-home-tab {
+    padding-left: 0;
+}
+.nav-tabs .nav-link.active {
+    font-weight: 700;
+}
+.card .card-body {
+    font-size: 14px;
+    line-height: 16px;
+}
+.card {
+    cursor: pointer;
+}
+#album-carousel {
+    margin-left: -8px;
+}
+@media (max-width: 767px) {
+    .carousel-inner .carousel-item > div {
+        display: none;
+    }
+    .carousel-inner .carousel-item > div:first-child {
+        display: block;
+    }
+}
+.carousel-inner .carousel-item.active,
+.carousel-inner .carousel-item-next,
+.carousel-inner .carousel-item-prev {
+    display: flex;
+}
+@media (min-width: 768px) {
+    .carousel-inner .carousel-item-end.active,
+    .carousel-inner .carousel-item-next {
+      transform: translateX(25%);
+    }
+    .carousel-inner .carousel-item-start.active, 
+    .carousel-inner .carousel-item-prev {
+      transform: translateX(-25%);
+    }
+}
+.carousel-inner .carousel-item-end,
+.carousel-inner .carousel-item-start { 
+  transform: translateX(0);
+}
+
+.music-player {
+  -ms-flex-item-align: center;
+  -ms-grid-row-align: center;
+  align-self: center;
+  margin: auto;
+  display: block;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.player-main {
+  position: relative;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.main-current {
+  margin-bottom: 36px;
+}
+.main-current .current-keyvisual {
+  position: relative;
+  background: url("./compact-disc.png");
+  background-size: 150px;
+  background-position: 95% 50%;
+  background-repeat: no-repeat;
+}
+.main-current .current-keyvisual img {
+  position: relative;
+  z-index: 2;
+  height: auto;
+  border-radius: 10px;
+  width: 70%;
+}
+.main-current .current-info {
+  padding: 15px 0 0 0;
+  box-sizing: content-box;
+  vertical-align: top;
+  text-align: center;
+}
+.main-current .current-info h1, .main-current .current-info p {
+  margin: auto;
+  padding: 0;
+}
+.main-current .current-info h1 {
+  margin-bottom: 0;
+  font-size: 16px;
+  color: #000;
+}
+.main-current .current-info p {
+  font-size: 12px;
+  color: #000;
+}
+.time-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%; 
+}
+
+.time-container span {
+    flex: 1; 
+    color: #000;
+    font-size: 12px;
+}
+
+.time-container::after {
+    flex: 0;
+}
+#seekBar {
+    width: 100%;
+}
+#audioPlayer {
+    text-align: center;
+}
+#prev,
+#next {
+    font-size: 55px;
+    line-height: 55px;
+    padding: 0;
+    color: #9e5371;
+}
+#prev:active,
+#prev:hover,
+#prev:focus,
+#next:active,
+#next:hover,
+#next:focus {
+    color: #742e62;
+    box-shadow: none;
+}
+#play {
+    border-radius: 50%;
+    background: #742E62;
+    background: linear-gradient(to top, #742E62 0%, #9B506F 100%);
+    width: 80px;
+    height: 80px;
+}
+#play i {
+    font-size: 62px;
+    line-height: 62px;
+    padding: 0;
+    color: #fff;
+    transition: all .4s ease;
+}
+#play i.bi-pause-fill {
+    margin-left: -4px;
+}
+#play:active,
+#play:hover,
+#play:focus {
+    box-shadow: none;
+}
+#play:active i,
+#play:hover i,
+#play:focus i {
+    color: rgba(255,255,255, 0.8);
+}
+
+@media (max-width: 767px){
+    .music-player {
+        max-width: 320px;
+        width: 100%;
+    }
+}
+#related-artist .card-body a,
+#related-artist .card-img a img {
+    color: #fff;
+    text-decoration: none;
+    transition: all .4s ease;
+}
+#related-artist .card-body a:hover,
+#related-artist .card-body a:active,
+#related-artist .card-body a:focus {
+    color: #1ed05d;
+}
+#related-artist .card-img a:hover img {
+    opacity: 0.8;
+}
